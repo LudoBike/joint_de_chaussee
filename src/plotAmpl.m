@@ -1,6 +1,10 @@
 function [] = plotAmpl(audioData, tStart, tEnd)
-%PLOTAMPL Summary of this function goes here
-%   Detailed explanation goes here
+%PLOTAMPL Plot the amplitude of the canals of audioData between tStart and
+% tEnd
+%   audioData is a matrice (1st result of the function audioread)
+%   tStart and tEnd are floats, define the extract to plot
+
+assert(tStart < tEnd, "tStart must be lower than tEnd");
 
 % Voie X
 subplot(1, 2, 1);
