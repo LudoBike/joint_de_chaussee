@@ -1,0 +1,6 @@
+**/*.asv
+src/Old/
+audio_input/
+audio_output/
+images/
+metadata/
