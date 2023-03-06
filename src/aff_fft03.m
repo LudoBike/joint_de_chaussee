@@ -1,5 +1,5 @@
 
-fech=3000; % le fichier avec cette fréquence d'échantillonnage doit déjà exister
+fech=500; % le fichier avec cette fréquence d'échantillonnage doit déjà exister
 fcoup=fech/2; % Frequence de coupure initiale
 % 1/2 car theoreme de shannon
 fcoup_new=fech/4; % Possibilite de supprimer les hautes frequences
@@ -14,9 +14,9 @@ optn_genere_wav=true;
 
 tab_intervals=[1.3 2.7 ; 6.7 8.2 ; 10.3 11.5 ; 12.9 14.9];
 
-pth_extraits=strcat('D:\audio_output\',audiofile_name,'\');                                          % Chemin d'acces fichiers apres traitement fft de coupure
-pth_im_png=strcat('D:\images\png\fft\',audiofile_name,'\');
-pth_im_fig=strcat('D:\images\fig\fft\',audiofile_name,'\'); % Chemins d'acces images
+pth_extraits=strcat('..\audio_output\',audiofile_name,'\');                                          % Chemin d'acces fichiers apres traitement fft de coupure
+pth_im_png=strcat('..\images\png\fft\',audiofile_name,'\');
+pth_im_fig=strcat('..\images\fig\fft\',audiofile_name,'\'); % Chemins d'acces images
 
 pth_mod='module\';
 pth_arg='arg\';

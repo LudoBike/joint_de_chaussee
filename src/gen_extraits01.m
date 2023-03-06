@@ -5,8 +5,8 @@ fech=500; % Hz
 
 
 input_file='ZOOM0001';                                           % sans terminaison
-pth_input_audio=strcat('D:\audio_input\',input_file,'.WAV');
-pth_output_audio=strcat('D:\audio_output\',input_file,'\');      % modifie a chaque extrait genere
+pth_input_audio=strcat('..\audio_input\',input_file,'.WAV');
+pth_output_audio=strcat('..\audio_output\',input_file,'\');      % modifie a chaque extrait genere
 tab_intervals=[1.0 3.0 ; 9.0 12.0 ; 18.0 20.0];                  % importer a partir d excel (a coder)
 
 
@@ -48,7 +48,7 @@ for c = 1:length(tab_intervals)
     Y=s_t(N1:N2,2);
     
     filename_audio_extr = strcat('2fcoup_',string(floor(2*fcoup/1000)),'kHz_','fech_',string(floor(fech/1000)),'kHz_','extr',string(c),'.wav');
-    audiowrite(strcat(pth_output_audio,filename_audio_extr),s_t(N1:N2,:),floor(fs));
+    audiowrite(char(strcat(pth_output_audio,filename_audio_extr)),s_t(N1:N2,:),floor(fs));
 
 
 end
